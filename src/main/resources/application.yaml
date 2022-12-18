@@ -1,0 +1,3 @@
+e-core:
+  api:
+    base-url: https://cgjresszgg.execute-api.eu-west-1.amazonaws.com
