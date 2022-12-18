@@ -1,0 +1,23 @@
+### Create new role
+POST {{BASE_URL}}/roles
+Content-Type: application/json
+
+{
+  "description": "DIRECTOR"
+}
+
+### Assign a role to a team member
+PATCH {{BASE_URL}}/users/e947058e-2d5f-47d9-925b-27bcab14c38e/teams/7676a4bf-adfe-415c-941b-1739af07039b
+Content-Type: application/json
+
+{
+  "role": "DIRECTOR"
+}
+
+### Look up a role for a membership
+GET {{BASE_URL}}/users/e947058e-2d5f-47d9-925b-27bcab14c38e/teams/7676a4bf-adfe-415c-941b-1739af07039b
+Content-Type: application/json
+
+### Look up memberships for a role
+GET {{BASE_URL}}/users?teamId=7676a4bf-adfe-415c-941b-1739af07039b&role=DIRECTOR
+Content-Type: application/json
